@@ -2,7 +2,7 @@
 Yet Another Terminal Mod for Lethal Company
 
 ## Stats
-You can show the current stats of the savefile that are usually shown after being fired.
+You can show the current stats of the savefile that are usually shown after being fired.<br />
 The stats include:
 - Days survived
 - Deaths
@@ -11,6 +11,6 @@ The stats include:
 You can either type "show stats" or just "stats".
 
 ## Teleport
-You can teleport a player without leaving the terminal.
-Both "tp" and "teleport" work for this.
+You can teleport a player without leaving the terminal.<br />
+Both "tp" and "teleport" work for this.<br />
 Sending "tp [playername]" or "teleport [playername]" will switch the camera view and teleport the specific player.
