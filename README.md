@@ -14,3 +14,6 @@ You can either type "show stats" or just "stats".
 You can teleport a player without leaving the terminal.<br />
 Both "tp" and "teleport" work for this.<br />
 Sending "tp [playername]" or "teleport [playername]" will switch the camera view and teleport the specific player.
+
+## Known Issues
+Due to a race condition with switching camera targets and starting the teleport it will try to teleport before the camera view can switch.
