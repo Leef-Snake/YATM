@@ -14,20 +14,21 @@ namespace YATM
     {
         private const string pluginGUID = "com.leefsnake.yatm";
         private const string pluginName = "YATM";
-        private const string pluginVersion = "1.0.0";
+        private const string pluginVersion = "1.0.1";
 
         public static ManualLogSource mls = BepInEx.Logging.Logger.CreateLogSource(pluginGUID);
 
         private void Awake()
         {
             // Plugin startup logic
-            TerminalParsedSentence += TextParsed;
+            
+            //TerminalParsedSentence += TextParsed;
 
             Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
 
             Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly());
 
-            TerminalNode nodeTeleConfirm = CreateTerminalNode("[Teleport]\n", true, "teleport");
+            TerminalNode nodeTeleConfirm = CreateTerminalNode("[Teleport]", true, "teleport");
             TerminalKeyword vTeleport = CreateTerminalKeyword("teleport", true, nodeTeleConfirm);
             TerminalKeyword vTeleportShort = CreateTerminalKeyword("tp", true, nodeTeleConfirm);
             nodeTeleConfirm.isConfirmationNode = true;
@@ -43,10 +44,12 @@ namespace YATM
             AddTerminalKeyword(nStats);
             AddTerminalKeyword(vShow);
         }
+        /*
         private void TextParsed(object sender, TerminalParseSentenceEventArgs e)
         {
             Logger.LogMessage($"Text submitted: {e.SubmittedText} Node Returned: {e.ReturnedNode.name}");
             Logger.LogMessage($"Node displayText: {e.ReturnedNode.displayText}");
         }
+        */
     }
 }
