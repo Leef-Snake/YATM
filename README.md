@@ -15,5 +15,9 @@ You can teleport a player without leaving the terminal.<br />
 Both "tp" and "teleport" work for this.<br />
 Sending "tp [playername]" or "teleport [playername]" will switch the camera view and teleport the specific player.
 
+## ITP
+Using the inverse teleporter via the command "itp" is possible.
+It works the same as the regular inverse teleporter; it literally just presses the button.
+
 ## Known Issues
-Due to a race condition with switching camera targets and starting the teleport it will try to teleport before the camera view can switch.
+Being the host and trying to teleport a player via name (teleport [name]) causes a desync and won't teleport anyone.
