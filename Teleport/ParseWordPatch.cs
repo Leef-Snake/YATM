@@ -31,11 +31,11 @@ namespace YATM.Teleport
                         result = GetKeyword(playerName);
                         if (!result)
                         {
-                            /*
+#if DEBUG
                             Plugin.mls.LogMessage($"Parse Word Patch name: {playerName}");
                             Plugin.mls.LogMessage($"Parse Word Patch node: {node.displayText}");
                             Plugin.mls.LogMessage($"Parse Word Patch nodeCB: {"[Teleport]\n" + sPlayerName + "\n"}");
-                            */
+#endif
                             result = CreateTerminalKeyword(playerName, false, node);
                             TerminalKeyword vTeleport = GetKeyword("teleport");
                             TerminalKeyword vTp = GetKeyword("tp");

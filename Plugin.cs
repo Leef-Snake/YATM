@@ -28,13 +28,15 @@ namespace YATM
 
             Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly());
 
-            TerminalNode nodeTeleConfirm = CreateTerminalNode("[Teleport]", true, "teleport");
-            TerminalKeyword vTeleport = CreateTerminalKeyword("teleport", true, nodeTeleConfirm);
-            TerminalKeyword vTeleportShort = CreateTerminalKeyword("tp", true, nodeTeleConfirm);
-            nodeTeleConfirm.isConfirmationNode = true;
+            TerminalNode nodeTeleport = CreateTerminalNode("[Teleport]", true, "teleport");
+            TerminalKeyword vTeleport = CreateTerminalKeyword("teleport", true, nodeTeleport);
+            TerminalKeyword vTeleportShort = CreateTerminalKeyword("tp", true, nodeTeleport);
             AddTerminalKeyword(vTeleport);
             AddTerminalKeyword(vTeleportShort);
             
+            TerminalNode nodeITP = CreateTerminalNode("[ITP]", true, "inverse");
+            TerminalKeyword vInverse = CreateTerminalKeyword("itp", true, nodeITP);
+            AddTerminalKeyword(vInverse);
 
             TerminalNode nodeStats = CreateTerminalNode("[ShowStats]", true, "stats");
             TerminalKeyword vShow = CreateTerminalKeyword("show", true);
