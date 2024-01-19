@@ -4,7 +4,7 @@ using System.Collections;
 namespace YATM
 {
     [HarmonyPatch(typeof(Terminal), "RunTerminalEvents")]
-    class Stats
+    class EventsPatch
     {
         public static string BuildStats()
         {
