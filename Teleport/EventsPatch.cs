@@ -199,7 +199,7 @@ namespace YATM.Teleport
         {
             // Start the coroutine
             __instance.StartCoroutine(PostfixCoroutine(__instance, node));
-            if (sDoSwitch && sDoTp)
+            if (sDoSwitch && sDoTp && YATM.Config.configEnableTeleportByName.Value)
             {
                 sDoSwitch = false;
                 // when we switch first, we teleport in a postfix patch for updateMapTarget to ensure sync
