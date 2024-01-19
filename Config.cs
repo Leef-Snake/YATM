@@ -22,7 +22,7 @@ namespace YATM
                     "General.Toggles",
                     "EnableTeleportByName",
                     false,
-                    "Enable ability to teleport specific player by their name"
+                    "EXPERIMENTAL: Enable ability to teleport specific player by their name"
             );
 
             configEnableInverse = cfg.Bind(
