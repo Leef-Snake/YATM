@@ -8,7 +8,7 @@ The stats include:
 - Deaths
 - Scrap collected (value)
 - Steps taken
-You can either type "show stats" or just "stats".
+<br />You can either type "show stats" or just "stats".
 
 ## Teleport
 You can teleport a player without leaving the terminal.<br />
